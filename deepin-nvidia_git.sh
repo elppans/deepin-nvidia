@@ -28,7 +28,8 @@ sudo apt-get -y install git
 
 # Criando pasta para compilação (build = BDIR):
 
-BDIR="/var/dpnv/"
+BUILD="dpnv"
+BDIR="/var/"$BUILD"/"
 sudo  mkdir -p "$BDIR"
 sudo  chown "$USER"."$USER" "$BDIR"
 sudo  chmod 0775 "$BDIR"
@@ -43,7 +44,7 @@ sh -c "git clone https://github.com/elppans/deepin-nvidia.git "$BDIR""
 # [trusted=yes] instrue o apt para tratar os pacotes como autenticados
 
 sh -c "dpkg-scanpackages -m -t deb . | gzip -c > "$BDIR"Packages.gz"
-echo -e "deb [trusted=yes] file://"$BDIR" ./" |  sudo tee /etc/apt/sources.list.d/"$BDIR".list >> /dev/null
+echo -e "deb [trusted=yes] file://"$BDIR" ./" |  sudo tee /etc/apt/sources.list.d/"$BUILD".list >> /dev/null
 
 sudo apt-get update
 
