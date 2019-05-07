@@ -2,7 +2,7 @@
 
 if [ `id -u` == 0 ]; then
 	echo "Deve executar o comando como usuário normal..."
-	echo "Nos momentos apropriados será requisitado a senha para prosseguir!"
+	echo "Será requisitado a senha durante a configuração!"
 	exit 0
 fi
 
@@ -21,21 +21,33 @@ exec 2>&1
 # Atualizando lista de pacotes e o sistema:
 
 sudo apt-get update ; sudo apt-get dist-upgrade
+
+read -p "Configurando aplicativo git para clonar o repositório..." -t 5
+
 sudo apt-get -y install git
 
-BDIR="/var/build/"
+# Criando pasta para compilação (build = BDIR):
+
+BDIR="/var/dpnv/"
 sudo  mkdir -p "$BDIR"
 sudo  chown "$USER"."$USER" "$BDIR"
 sudo  chmod 0775 "$BDIR"
 
 cd "$BDIR"
 
-git clone https://github.com/elppans/deepin-nvidia.git `pwd`
+# Baixando pacotes para a instalação do driver NVidia:
+
+sh -c "git clone https://github.com/elppans/deepin-nvidia.git "$BDIR""
+
+# Fixando pasta "build", convertendo para "repositório local" e atualizando informações novamente:
+# [trusted=yes] instrue o apt para tratar os pacotes como autenticados
 
 sh -c "dpkg-scanpackages -m -t deb . | gzip -c > "$BDIR"Packages.gz"
-echo -e "deb [trusted=yes] file://"$BDIR" ./" |  sudo tee /etc/apt/sources.list.d/build.list >> /dev/null
+echo -e "deb [trusted=yes] file://"$BDIR" ./" |  sudo tee /etc/apt/sources.list.d/"$BDIR".list >> /dev/null
 
 sudo apt-get update
 
-echo "Fim..."
-echo "Foi criado um arquivo de log em "$LOGFILE""
+echo "Foi criado um repositório local em "$BDIR" e configurado um "$BDIR".list,"
+echo "Para instalar, deve fazer como qualquer repositório oficial, usando o apt ou aplicativo gráfico..."
+echo "Foi criado um arquivo de log em "$LOGFILE"!"
+sleep 2
