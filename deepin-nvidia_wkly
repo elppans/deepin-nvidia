@@ -1,0 +1,8 @@
+#!/bin/bash
+# Carregar variáveis
+. /etc/deepin-nvidia.env
+
+# Remove arquivo de log do Deepin NVidia Hourly
+sudo rm -rf "$DIRLOG"/deepin-nvidia*.log
+
+

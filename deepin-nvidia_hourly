@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# Carregar variáveis
+. /etc/deepin-nvidia.env
+
 ##	Usando arquivo de log
 
-LOGFILE="$HOME/.${0##*/}".log
+LOGFILE="$DIRLOG/.${0##*/}".log
 
 # Habilita log copiando a saída padrão para o arquivo LOGFILE
 
@@ -14,9 +17,6 @@ exec 2>&1
 
 # Marcar a data para o log
 date
-
-# Carregar variáveis
-. /etc/deepin-nvidia.env
 
 # Verificar se o repositório local existe
 if [ -d "$BDIR" ]; then
