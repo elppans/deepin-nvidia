@@ -28,7 +28,7 @@ sudo apt-get -y install git
 
 # Criando pasta para compilação (build = BDIR):
 
-BUILD="dpnv"
+BUILD="deepnv"
 BDIR="/var/"$BUILD"/"
 sudo  mkdir -p "$BDIR"
 sudo  chown "$USER"."$USER" "$BDIR"
