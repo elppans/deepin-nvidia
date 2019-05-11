@@ -48,7 +48,13 @@ echo -e "deb [trusted=yes] file://"$BDIR" ./" |  sudo tee /etc/apt/sources.list.
 
 sudo apt-get update
 
+chmod +x "$BDIR"deepin-nvidia_hourly
+sudo cp -rfv "$BDIR"deepin-nvidia_hourly /etc/cron.hourly/deepin-nvidia_hourly
+sudo cp -rfv "$BDIR"deepin-nvidia.env /etc/deepin-nvidia.env
+sudo chmod 0644 /etc/deepin-nvidia.env
+
 echo "Foi criado um repositório local em "$BDIR" e configurado um "$BDIR".list,"
+echo "Ativado verificação do repositório a cada 1 (uma) hora"
 echo "Para instalar, deve fazer como qualquer repositório oficial, usando o apt ou aplicativo gráfico..."
 echo "Foi criado um arquivo de log em "$LOGFILE"!"
 sleep 2

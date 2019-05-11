@@ -1,0 +1,34 @@
+#!/bin/bash
+
+##	Usando arquivo de log
+
+LOGFILE="$HOME/.${0##*/}".log
+
+# Habilita log copiando a saída padrão para o arquivo LOGFILE
+
+exec 1> >(tee -a "$LOGFILE")
+
+# faz o mesmo para a saída de ERROS
+
+exec 2>&1
+
+# Marcar a data para o log
+date
+
+# Carregar variáveis
+. /etc/deepin-nvidia.env
+
+# Verificar se o repositório local existe
+if [ -d "$BDIR" ]; then
+	cd "$BDIR"
+	# Verificando atualizações
+	git pull | grep .deb && \
+  {
+	# Se houver atualizações, será atualizado a lista de pacotes do repositório
+	sh -c "dpkg-scanpackages -m -t deb . | gzip -c > "$BDIR"Packages.gz"
+
+}
+
+fi
+
+
