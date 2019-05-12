@@ -25,6 +25,8 @@ $ apt-key list
 $ sudo apt-key del KEY.ID
 ```
 
+Informações detalhadas sobre o Driver Gráfico:
+>[https://www.nvidia.com.br/download/driverResults.aspx/145276/br](https://www.nvidia.com.br/download/driverResults.aspx/145276/br)
 
 
 ------
