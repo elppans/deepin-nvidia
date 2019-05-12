@@ -5,6 +5,11 @@
 
 <a href="deepin-nvidia_418.56.png"  title="CLIQUE AQUI PARA AMPLICAR" ><img src="deepin-nvidia_418.56.png" width="1024" height="645" /></a>
 
+<div class="galeria">
+  <img src="deepin-nvidia_418.56.png">
+  <img src="deepin-nvidia_418.56.png">
+</div>
+
 Este é um repositório **NÃO OFICIAL** para a instalação do Driver NVidia e sua versão atual é 418.56
 
 Foi usado o source de alguns pacotes do Debian Stable + Stable Backports, porém, mantendo todas as dependências do Deepin, para que seja o mais estável possível. Por não ser um repositório oficial, ao sair a versão compilada pelo próprio time Deepin, prefira a mesma.
