@@ -38,7 +38,7 @@ $ sudo apt-key del KEY.ID
  
 
 ```
-Package: glx-alternative-mesa
+ Package: glx-alternative-mesa
  Version: 0.9.1~bpo9+1
  Architecture: amd64
  Description: allows the selection of MESA as GLX provider
