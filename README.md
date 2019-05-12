@@ -24,6 +24,8 @@ sudo apt-key del KEY.ID
 
 Abaixo está uma lista de todos os pacotes disponíveis:
 
+#
+
 
  Package: glx-alternative-mesa
  Version: 0.9.1~bpo9+1
@@ -1586,4 +1588,3 @@ Abaixo está uma lista de todos os pacotes disponíveis:
  Version: 418.56-2~bpo9+1
  Architecture: i386
  Description: NVIDIA binary Xorg driver
-
