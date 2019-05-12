@@ -1,0 +1,1299 @@
+Package: libcuda1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 15885
+Pre-Depends: nvidia-legacy-check (>= 343)
+Depends: nvidia-support, nvidia-alternative (= 418.56-2~bpo9+1), libnvidia-fatbinaryloader (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Recommends: nvidia-kernel-dkms (= 418.56-2~bpo9+1) | nvidia-kernel-418.56, nvidia-smi, libnvidia-cfg1 (= 418.56-2~bpo9+1), nvidia-persistenced, libcuda1-i386
+Suggests: nvidia-cuda-mps, nvidia-kernel-dkms (>= 418.56) | nvidia-kernel-source (>= 418.56)
+Provides: libcuda-10.0-1, libcuda-10.1-1, libcuda-5.0-1, libcuda-5.5-1, libcuda-6.0-1, libcuda-6.5-1, libcuda-7.0-1, libcuda-7.5-1, libcuda-8.0-1, libcuda-9.0-1, libcuda-9.1-1, libcuda-9.2-1, libcuda1-any
+Multi-Arch: same
+Homepage: https://www.nvidia.com/CUDA
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libcuda1_418.56-2~bpo9+1_amd64.deb
+Size: 2093432
+SHA256: 4a41f4426a08e7560b8ab021e437040f5b1d87a444025fac9946a1fe3b728d1f
+SHA1: ac253aef2504abd7dc148786b371d6fda35989e4
+MD5sum: 770198381af36dfd8b7ccd79ed8d633f
+Description: NVIDIA CUDA Driver Library
+ The Compute Unified Device Architecture (CUDA) enables NVIDIA
+ graphics processing units (GPUs) to be used for massively parallel
+ general purpose computation.
+ .
+ This package contains the CUDA Driver API library for low-level CUDA
+ programming.
+ .
+ Supported NVIDIA devices include GPUs starting from GeForce 8 and Quadro FX
+ series, as well as the Tesla computing processors.
+ .
+ Please see the nvidia-kernel-dkms or
+ nvidia-kernel-source packages
+ for building the kernel module required by this package.
+ This will provide nvidia-kernel-418.56.
+
+Package: libegl-nvidia0
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 1408
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libnvidia-eglcore (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libegl-nvidia0_418.56-2~bpo9+1_amd64.deb
+Size: 431660
+SHA256: a3697b9e6c2a8ab63622525574c0165faa3663e9fc508793da1b9b23ae2d0bce
+SHA1: 029ec59e885eaecf44ef57af23bc497f259a967b
+MD5sum: a7fffb6168a715c5605553ef6bc98402
+Description: NVIDIA binary EGL library
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES.
+ .
+ See the description of the nvidia-driver package
+ or /usr/share/doc/libgl1-nvidia-glx/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the driver specific binary EGL implementation provided
+ by NVIDIA that is accessed via GLVND.
+
+Package: libegl1-nvidia
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 250
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libegl-nvidia0 (= 418.56-2~bpo9+1), libc6 (>= 2.2.5), libglvnd0
+Conflicts: libgl1-nvidia-glvnd-glx, nvidia-driver-libs
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libegl1-nvidia_418.56-2~bpo9+1_amd64.deb
+Size: 209490
+SHA256: ff0635326c3cb63edec03a3162dd768e377ca1f2957a5137e322a298b35fb1b6
+SHA1: ba0bf3a53f1806ab7087f506d3761bb781b6fa34
+MD5sum: 86f400e2b240bf1303c18799f3f3e012
+Description: NVIDIA binary EGL library (non-GLVND variant)
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES.
+ .
+ This package contains the driver specific binary EGL implementation by NVIDIA
+ as a non-GLVND alternative.
+
+Package: libgl1-nvidia-glvnd-glx
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 370
+Depends: libgl1 (>= 0.2.999) | libgl1-glvnd-nvidia-glx, libglx-nvidia0 (= 418.56-2~bpo9+1)
+Provides: libgl1-nvidia-glx-any
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libgl1-nvidia-glvnd-glx_418.56-2~bpo9+1_amd64.deb
+Size: 358806
+SHA256: 516a700dc05e52787b842519d12fb4ce349311bd1767967c2fce4d4ed05aac5d
+SHA1: 74c12718c6501a93b250419bb4e50f95ae5b94fe
+MD5sum: 3913789874a0aa3172c1ac92d7ccea0c
+Description: NVIDIA binary OpenGL/GLX library (GLVND variant)
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ See the description of the nvidia-driver package
+ or /usr/share/doc/libgl1-nvidia-glvnd-glx/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This metapackage depends on the NVIDIA binary OpenGL/GLX implementation using
+ GLVND and the corresponding GLVND loader library.
+
+Package: libgl1-nvidia-glx
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 1715
+Pre-Depends: nvidia-installer-cleanup, nvidia-legacy-check (>= 343)
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libnvidia-glcore (= 418.56-2~bpo9+1), nvidia-support, libc6 (>= 2.2.5), libx11-6, libxext6
+Recommends: nvidia-driver-libs-nonglvnd (= 418.56-2~bpo9+1), nvidia-kernel-dkms (= 418.56-2~bpo9+1) | nvidia-kernel-418.56
+Suggests: nvidia-kernel-dkms (>= 418.56) | nvidia-kernel-source (>= 418.56)
+Conflicts: libgl1-nvidia-glvnd-glx
+Provides: libgl1-nvidia-glx-any
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libgl1-nvidia-glx_418.56-2~bpo9+1_amd64.deb
+Size: 618538
+SHA256: 8abf599a097527b2215cdc18c1e84f59ee43701c735d8aac5a6a8c78b8bc53fd
+SHA1: 2bfb690a739296488b08edc8b7188e776d74f3ea
+MD5sum: e8a0129fa9a9db037f20848ef16d818f
+Description: NVIDIA binary OpenGL/GLX library (non-GLVND variant)
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ See the description of the nvidia-driver package
+ or /usr/share/doc/libgl1-nvidia-glx/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the driver specific binary OpenGL/GLX implementation
+ provided by NVIDIA as a non-GLVND alternative.
+
+Package: libgles-nvidia1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 289
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libgles1 (>= 0.2.999) | libgles1-glvnd-nvidia, libnvidia-eglcore (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libgles-nvidia1_418.56-2~bpo9+1_amd64.deb
+Size: 221198
+SHA256: 2c00f635121e82d251fda0ab247b58bc907b1884aca1652d6069c487a53d71a4
+SHA1: b839ebea7e3e2f233f322095f1a629a83fdd8740
+MD5sum: f38a90e8751e5bf025a1f3783801a82f
+Description: NVIDIA binary OpenGL|ES 1.x library
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 1.x provides an API for fixed-function hardware.
+ .
+ See the description of the nvidia-driver package
+ or /usr/share/doc/libgl1-nvidia-glx/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the driver specific binary OpenGL|ES 1.x implementation
+ by NVIDIA that is accessed via GLVND.
+
+Package: libgles-nvidia2
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 345
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libgles2 (>= 0.2.999) | libgles2-glvnd-nvidia, libnvidia-eglcore (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libgles-nvidia2_418.56-2~bpo9+1_amd64.deb
+Size: 230872
+SHA256: 8c663609632d891c8200ea678e20076b7c0ded249bd835a6e886274e7a523965
+SHA1: f9167617bdaff4847b90e2febb5838baa46797d8
+MD5sum: b8a6af864796860908265a4112020202
+Description: NVIDIA binary OpenGL|ES 2.x library
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ OpenGL|ES 2.x provides an API for programmable hardware including vertex
+ and fragment shaders.
+ .
+ See the description of the nvidia-driver package
+ or /usr/share/doc/libgl1-nvidia-glx/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the driver specific binary OpenGL|ES 2.x implementation
+ by NVIDIA that is accessed via GLVND.
+
+Package: libglx-nvidia0
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 1560
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libglx0 | libglx0-glvnd-nvidia, libnvidia-glcore (= 418.56-2~bpo9+1), libc6 (>= 2.2.5), libx11-6, libxext6
+Provides: libglx-vendor
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libglx-nvidia0_418.56-2~bpo9+1_amd64.deb
+Size: 460834
+SHA256: 0703c7af625196ac8525287ca0d815b4d5b7c30af64bd7908ce13199cd98d156
+SHA1: 8d45acb6d0ce284154df72f50c3685534b69a637
+MD5sum: c6d4e0ff6b2dc841ab7035e088751d53
+Description: NVIDIA binary GLX library
+ GLX ("OpenGL Extension to the X Window System") provides an interface between
+ OpenGL and the X Window System as well as extensions to OpenGL itself.
+ .
+ See the description of the nvidia-driver package
+ or /usr/share/doc/libgl1-nvidia-glx/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the driver specific binary GLX implementation by NVIDIA
+ that is accessed via GLVND.
+
+Package: libnvcuvid1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 3371
+Depends: libcuda1 (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvcuvid1_418.56-2~bpo9+1_amd64.deb
+Size: 898144
+SHA256: c85a23aadb037b0c0248048ab8dac8534d0a6122da0c6fe3254b7c6d40eaf282
+SHA1: 32ffca65de20784142fd472c5888aee1de5003f8
+MD5sum: 2b2084d9eea665457d4ddab72c784a74
+Description: NVIDIA CUDA Video Decoder runtime library
+ The Compute Unified Device Architecture (CUDA) enables NVIDIA
+ graphics processing units (GPUs) to be used for massively parallel
+ general purpose computation.
+ .
+ The NVIDIA CUDA Video Decoder (NVCUVID) library provides an interface to
+ hardware video decoding capabilities on NVIDIA GPUs with CUDA.
+ .
+ This package contains the nvcuvid runtime library.
+
+Package: libnvidia-cbl
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 585
+Depends: libc6 (>= 2.7), libnvidia-fatbinaryloader (>= 415)
+Conflicts: libnvidia-cbl-418.56
+Provides: libnvidia-cbl-418.56
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-cbl_418.56-2~bpo9+1_amd64.deb
+Size: 324206
+SHA256: 348626ef24b02146312aac8b2407ed23970ee36ad9222aff66f1bae1a3a95068
+SHA1: 834e9066d92aed80b1cb06365a91a896a8c6e1d9
+MD5sum: 57bf008fbafc303b2b45b855d93fe8c1
+Description: NVIDIA binary Vulkan ray tracing (cbl) library
+ Vulkan is a multivendor open standard by the Khronos Group for 3D graphics.
+ .
+ This library is part of the Vulkan real-time ray tracing extensions
+ (VK_NV_raytracing) implementation by NVIDIA.
+ .
+ This package contains the private cbl library used by the NVIDIA
+ implementation of Vulkan.
+
+Package: libnvidia-cfg1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 413
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Breaks: libgl1-nvidia-glx (<< 355.11-5)
+Replaces: libgl1-nvidia-glx (<< 355.11-5)
+Provides: libnvidia-cfg1-any
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-cfg1_418.56-2~bpo9+1_amd64.deb
+Size: 266028
+SHA256: 883d517dc054830409d08ff3308b91b9ba1584385e16634faa88605c2d8cd968
+SHA1: 8715f76a79456051046d1e901215001a0b3a60d9
+MD5sum: 3bb76f1b3b9c91c0dc41084ab670053a
+Description: NVIDIA binary OpenGL/GLX configuration library
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This package contains the libnvidia-cfg.so.1 runtime library.
+
+Package: libnvidia-compiler
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 48794
+Depends: libc6 (>= 2.2.5)
+Conflicts: libnvidia-compiler-418.56
+Provides: libnvidia-compiler-418.56
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-compiler_418.56-2~bpo9+1_amd64.deb
+Size: 12004892
+SHA256: bdf79438a5de9226156cc6288947b701a73c7709fd1631d42f70e48ab46334cb
+SHA1: be3be24f9966ceb1f8de00ae116a021467d30ad4
+MD5sum: 20eb838bebd905cc5a58221acf0fbf06
+Description: NVIDIA runtime compiler library
+ The Compute Unified Device Architecture (CUDA) enables NVIDIA
+ graphics processing units (GPUs) to be used for massively parallel
+ general purpose computation.
+ .
+ This package contains the runtime compiler library.
+
+Package: libnvidia-eglcore
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 26154
+Depends: libc6 (>= 2.2.5)
+Conflicts: libnvidia-eglcore-418.56
+Provides: libnvidia-eglcore-418.56
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-eglcore_418.56-2~bpo9+1_amd64.deb
+Size: 6298280
+SHA256: 88b5a9a92eab0d4570ad8df885061fdaf197356acf08793372af09603a3c52b6
+SHA1: a950d039d7b12fa7b9686d43afe4ac16436f983b
+MD5sum: 6e54c4d9a1f88752489a10a9b657dc66
+Description: NVIDIA binary EGL core libraries
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES.
+ .
+ OpenGL|ES is a cross-platform API for full-function 2D and 3D graphics on
+ embedded systems - including consoles, phones, appliances and vehicles.
+ It contains a subset of OpenGL plus a number of extensions for the
+ special needs of embedded systems.
+ .
+ This package contains the private core libraries used by the NVIDIA
+ implementation of EGL and OpenGL|ES.
+
+Package: libnvidia-encode1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 369
+Depends: libcuda1 (= 418.56-2~bpo9+1), libc6 (>= 2.2.5), libnvcuvid1 (>= 260)
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-encode1_418.56-2~bpo9+1_amd64.deb
+Size: 243670
+SHA256: a9dbd644cb422725a30f8874225eafc11d75920ba28d61d85af6824891e48464
+SHA1: 2bb8e52d95cb02d8413000d6b7e55c1d8475cc96
+MD5sum: d9dafc6027b41f87759036b41e72dc98
+Description: NVENC Video Encoding runtime library
+ The NVENC Video Encoding library provides an interface to video encoder
+ hardware on supported NVIDIA GPUs.
+ .
+ This package contains the nvidia-encode runtime library.
+
+Package: libnvidia-fatbinaryloader
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 517
+Depends: libnvidia-ptxjitcompiler1 (= 418.56-2~bpo9+1), libc6 (>= 2.7)
+Conflicts: libnvidia-fatbinaryloader-418.56
+Provides: libnvidia-fatbinaryloader-418.56
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-fatbinaryloader_418.56-2~bpo9+1_amd64.deb
+Size: 321922
+SHA256: 1b0b7d72ef5d3dd9eb38dd11d92ae368cf2499949c3202e4ad40dea24be37527
+SHA1: 49ec4df6c32945f99aeeacb6bd8d23101a45e91f
+MD5sum: 813581df94aeb6ac27bd0066c277da0c
+Description: NVIDIA FAT binary loader
+ The Compute Unified Device Architecture (CUDA) enables NVIDIA
+ graphics processing units (GPUs) to be used for massively parallel
+ general purpose computation.
+ .
+ This package contains the FAT multiarchitecture binary loader.
+
+Package: libnvidia-fbc1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 348
+Depends: libcuda1 (= 418.56-2~bpo9+1), libc6 (>= 2.2.5), libgl1 (>= 0.2.999) | libgl1-mesa-glx, libx11-6, libxext6
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-fbc1_418.56-2~bpo9+1_amd64.deb
+Size: 239348
+SHA256: ce4c89e25d85b1aa94d4f6c1221d85970bdb99b7bf06b915755f068e2047959a
+SHA1: 1785d1ef6402c0d2d27d9172eb58e5b1278a5b56
+MD5sum: ad32f09a63d306b4c8f12ca797dd2c51
+Description: NVIDIA OpenGL-based Framebuffer Capture runtime library
+ The NVIDIA OpenGL-based Framebuffer Capture (NvFBCOpenGL) library provides
+ a high performance, low latency interface to capture and optionally encode an
+ OpenGL framebuffer. NvFBCOpenGL is a private API that is only available to
+ approved partners for use in remote graphics scenarios.
+ .
+ This package contains the NvFBCOpenGL runtime library.
+
+Package: libnvidia-glcore
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 27206
+Depends: libc6 (>= 2.2.5)
+Conflicts: libgl1-nvidia-glx-418.56, libnvidia-glcore-418.56
+Breaks: libgl1-nvidia-glx (<< 355.11-5)
+Replaces: libgl1-nvidia-glx (<< 355.11-5)
+Provides: libnvidia-glcore-418.56
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-glcore_418.56-2~bpo9+1_amd64.deb
+Size: 6317316
+SHA256: 3d850c68081652d439df6d93dc3274bc0ebc86ecc2d7bb9d16cc070883930b08
+SHA1: dee17511f0e2e566cd08f4ab7bf482138312c558
+MD5sum: 9e9852c0af23d0aa009054c57391f7ce
+Description: NVIDIA binary OpenGL/GLX core libraries
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This package contains the private core libraries used by the NVIDIA
+ implementation of OpenGL and GLX.
+
+Package: libnvidia-glvkspirv
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 13863
+Depends: libc6 (>= 2.2.5)
+Conflicts: libnvidia-glvkspirv-418.56
+Provides: libnvidia-glvkspirv-418.56
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-glvkspirv_418.56-2~bpo9+1_amd64.deb
+Size: 4332074
+SHA256: f3fc18d79628a54d7e3e819ec0903194e6620966b2f6ce7b8dc70b915229bf4a
+SHA1: 32652c6d0211beeb0c69095e5f52c00da22b6512
+MD5sum: e452912e8d9fe834a0da57adb88678cc
+Description: NVIDIA binary Vulkan Spir-V compiler library
+ Vulkan is a multivendor open standard by the Khronos Group for 3D graphics.
+ .
+ This library provides a NVIDIA Vulkan Spir-V compiler which reduces shader
+ compilation time and shader system memory consumption.
+ .
+ This package contains the private Spir-V compiler libraries used by the
+ NVIDIA implementation of Vulkan.
+
+Package: libnvidia-ifr1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 430
+Depends: libcuda1 (= 418.56-2~bpo9+1), libc6 (>= 2.2.5), libgl1 (>= 0.2.999) | libgl1-mesa-glx, libx11-6
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-ifr1_418.56-2~bpo9+1_amd64.deb
+Size: 263516
+SHA256: 1b9a0e086afdc2399ccb6fe71aa82fe4cc814e585a31bc8113b57f6d401fc569
+SHA1: 8a318cfde1f882120e59c17b8a80ec6a0664a21c
+MD5sum: 023fe3605b4caa43fcf9ff3e0e5ec166
+Description: NVIDIA OpenGL-based Inband Frame Readback runtime library
+ The NVIDIA OpenGL-based Inband Frame Readback (NvIFROpenGL) library provides
+ a high performance, low latency interface to capture and optionally encode an
+ OpenGL framebuffer. NvIFROpenGL is a private API that is only available to
+ approved partners for use in remote graphics scenarios.
+ .
+ This package contains the NvIFROpenGL runtime library.
+
+Package: libnvidia-ml1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 1768
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Breaks: nvidia-smi (<< 418.56)
+Multi-Arch: same
+Homepage: https://developer.nvidia.com/nvidia-management-library-NVML
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-ml1_418.56-2~bpo9+1_amd64.deb
+Size: 636906
+SHA256: bc72ec11f27ae0395b12cecd55c5ebe70affcb91d1e961cb646e36233eeee159
+SHA1: c005a454c043f9c159db68bb8acfb0853fa245da
+MD5sum: ec8937e7b529be0d4e11b9082b99eda0
+Description: NVIDIA Management Library (NVML) runtime library
+ The NVIDIA Management Library (NVML) provides a monitoring and management API.
+ It provides a direct access to the queries and commands exposed via nvidia-smi.
+ .
+ This package contains the nvidia-ml runtime library.
+
+Package: libnvidia-opticalflow1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 319
+Depends: libc6 (>= 2.2.5), libnvcuvid1 (>= 260)
+Multi-Arch: same
+Homepage: https://developer.nvidia.com/opticalflow-sdk
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-opticalflow1_418.56-2~bpo9+1_amd64.deb
+Size: 228624
+SHA256: f9b4dda08167dd6199e8ea4e3f3cd8a20b979a8345a62cff42fa3417235e0391
+SHA1: 355a4dc837b17b82bf88007595eba6d1d7fe7bb6
+MD5sum: dd7a4d9c9e630b01d75122ebde41c24f
+Description: NVIDIA Optical Flow runtime library
+ The NVIDIA Optical Flow SDK exposes the latest hardware capability of Turing
+ GPUs dedicated to computing the relative motion of pixels between images.
+ .
+ This package contains the Optical Flow runtime library.
+
+Package: libnvidia-ptxjitcompiler1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 7584
+Depends: libc6 (>= 2.7)
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-ptxjitcompiler1_418.56-2~bpo9+1_amd64.deb
+Size: 3501442
+SHA256: 3d721df362a4bba557b731d9f31139cc7b0ab13913028047d4c027d28f0e0fb9
+SHA1: ca4eb8f01c587f9cc07df2e888176a5de91eb89c
+MD5sum: a63ccc1e6b3d0e853d7814078a992a58
+Description: NVIDIA PTX JIT Compiler
+ The Compute Unified Device Architecture (CUDA) enables NVIDIA
+ graphics processing units (GPUs) to be used for massively parallel
+ general purpose computation.
+ .
+ This package contains the runtime PTX JIT compiler library.
+
+Package: libnvidia-rtcore
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 27750
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:4.2)
+Conflicts: libnvidia-rtcore-418.56
+Provides: libnvidia-rtcore-418.56
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvidia-rtcore_418.56-2~bpo9+1_amd64.deb
+Size: 7095612
+SHA256: f02265b489d4454bdedddd6f4ab14112ab89301df1dae75fa920c24102c3e174
+SHA1: df9df5d295a6180da4d3e5ea1e15164432640bd0
+MD5sum: a6e8f4bd8f76ff687250ff1688d14761
+Description: NVIDIA binary Vulkan ray tracing (rtcore) library
+ Vulkan is a multivendor open standard by the Khronos Group for 3D graphics.
+ .
+ This library is part of the Vulkan real-time ray tracing extensions
+ (VK_NV_raytracing) implementation by NVIDIA.
+ .
+ This package contains the private rtcore library used by the NVIDIA
+ implementation of Vulkan.
+
+Package: libnvoptix1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 51080
+Depends: libcuda1 (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/libnvoptix1_418.56-2~bpo9+1_amd64.deb
+Size: 7992946
+SHA256: 81d170a3b56896328c9844d0003a5dfa62080ef50524387441fd9b56d60203fb
+SHA1: 85551be789a2b17f83ab628e5c80cb3ba6bf19ce
+MD5sum: 9469525ad40a5c92936c39b1c1cd0c2e
+Description: NVIDIA implementation of the OptiX ray tracing engine
+ The OptiX API is an application framework for achieving optimal ray tracing
+ performance on the GPU.
+ .
+ This package contains runtime library of the OptiX ray tracing engine
+ implementation for NVIDIA CUDA.
+ It is used by liboptix.so.* coming with applications using the OptiX API.
+
+Package: nvidia-alternative
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 241
+Pre-Depends: dpkg (>= 1.17.21), nvidia-legacy-check (>= 343)
+Depends: glx-alternative-nvidia (>= 0.9)
+Conflicts: libegl1-glvnd-nvidia, libgl1-glvnd-nvidia-glx, libgldispatch0-nvidia, libgles1-glvnd-nvidia, libgles2-glvnd-nvidia, libglvnd0-nvidia, libglx0-glvnd-nvidia, libopengl0-glvnd-nvidia
+Breaks: libcuda1 (<< 352.63), nvidia-driver (<< 343.22-2~)
+Provides: nvidia-alternative--kmod-alias
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-alternative_418.56-2~bpo9+1_amd64.deb
+Size: 203608
+SHA256: e86498412025e9325d3a54405fdd03de569b3b9ea4fd195d03e679a44274e771
+SHA1: d9506a78fb8d4178601c5cac9798dcefe7147924
+MD5sum: 34bd279b5d0b2e40f672f9d5868d56d2
+Description: allows the selection of NVIDIA as GLX provider
+ In setups with several NVIDIA driver versions installed (e.g. current and
+ legacy) this metapackage registers an alternative to allow easy switching
+ between the different versions.
+ .
+ Use 'update-glx --config nvidia' to select a version.
+ .
+ This package does not depend on the corresponding NVIDIA libraries.
+ In order to install the NVIDIA driver and libraries, install the
+ nvidia-driver package instead.
+
+Package: nvidia-cuda-mps
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 359
+Depends: libc6 (>= 2.2.5)
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/utils
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-cuda-mps_418.56-2~bpo9+1_amd64.deb
+Size: 237762
+SHA256: e9d1d17ddb440df55f1d65ac6e48805f4d951d2f316a912ebf70ce0a5f2352fb
+SHA1: 9c3eb8c08106edf854f1813c44b937143f653777
+MD5sum: 8141715cf641494b60cec48b72a30072
+Description: NVIDIA CUDA Multi Process Service (MPS)
+ The Compute Unified Device Architecture (CUDA) enables NVIDIA
+ graphics processing units (GPUs) to be used for massively parallel
+ general purpose computation.
+ .
+ CUDA MPS is a feature that allows multiple CUDA processes to share a single
+ GPU context. CUDA MPS should be transparent to CUDA programs.
+ .
+ CUDA MPS requires a device that supports Unified Virtual Address (UVA) and
+ has compute capability SM 3.5 or higher.
+ Pre-CUDA 4.0 APIs are not supported under CUDA MPS.
+
+Package: nvidia-detect
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 251
+Depends: pciutils
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/x11
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-detect_418.56-2~bpo9+1_amd64.deb
+Size: 204926
+SHA256: 54392ed028db4243feeb035ab838a2bd0b6ca8f648d823bd7308c32e76afdfea
+SHA1: b8aff3922dbced51709697689c6dbb13590757af
+MD5sum: eb3ad5e75fe228b712c2082ce8910fc2
+Description: NVIDIA GPU detection utility
+ The 'nvidia-detect' script in this package checks for an NVIDIA GPU in the
+ system and recommends one of the non-free accelerated driver meta-packages
+ (nvidia-driver, nvidia-legacy-390xx-driver, or nvidia-legacy-340xx-driver)
+ for installation.
+
+Package: nvidia-driver
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 1215
+Pre-Depends: nvidia-installer-cleanup, nvidia-legacy-check (>= 343)
+Depends: nvidia-driver-libs (= 418.56-2~bpo9+1) | nvidia-driver-libs-nonglvnd (= 418.56-2~bpo9+1), nvidia-driver-bin (= 418.56-2~bpo9+1), xserver-xorg-video-nvidia (= 418.56-2~bpo9+1), nvidia-vdpau-driver (= 418.56-2~bpo9+1), nvidia-alternative (= 418.56-2~bpo9+1), nvidia-kernel-dkms (= 418.56-2~bpo9+1) | nvidia-kernel-418.56, nvidia-support
+Recommends: nvidia-settings (>= 418), libnvidia-cfg1 (= 418.56-2~bpo9+1), nvidia-persistenced
+Suggests: nvidia-kernel-dkms (>= 418.56) | nvidia-kernel-source (>= 418.56)
+Breaks: nvidia-glx
+Replaces: nvidia-glx
+Provides: nvidia-glx-any
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/x11
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-driver_418.56-2~bpo9+1_amd64.deb
+Size: 507364
+SHA256: b5362f593caa26b53e41be9564b72fcdc0b08693a3e46d1dc43f0aac7839f70b
+SHA1: c0b610066d0cd43cb87b3b25a42748616dea438f
+MD5sum: cfd2eca8468063fb7d9cc8805dc018d5
+Description: NVIDIA metapackage
+ This metapackage depends on the NVIDIA binary driver and libraries
+ that provide optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES/Vulkan applications via a direct-rendering X Server.
+ .
+ Please see the nvidia-kernel-dkms or
+ nvidia-kernel-source packages
+ for building the kernel module required by this package.
+ This will provide nvidia-kernel-418.56.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, or newer architectures.  Look at the legacy packages
+ for older cards.
+ .
+ See /usr/share/doc/nvidia-driver/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ Building the kernel module has been tested up to Linux 4.20.
+
+Package: nvidia-driver-bin
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 507
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libc6 (>= 2.2.5), libnvidia-ml1 (>= 319)
+Recommends: nvidia-driver
+Conflicts: nvidia-driver-bin-418.56
+Breaks: nvidia-driver (<< 343.22-2~)
+Replaces: nvidia-driver (<< 343.22-2~)
+Provides: nvidia-driver-bin-418.56
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/x11
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-driver-bin_418.56-2~bpo9+1_amd64.deb
+Size: 289768
+SHA256: b89f221054bea4c84b3579632bdf71e6b503ff6c29c8defb84715745cc0510ec
+SHA1: b9290ea6819350ed0651726162fce2bd3800d495
+MD5sum: 18c0238bdf039bf6da9028b9b2ac79c2
+Description: NVIDIA driver support binaries
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This package contains supporting binaries for the driver.
+
+Package: nvidia-driver-libs
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 218
+Depends: libgl1-nvidia-glvnd-glx (= 418.56-2~bpo9+1), nvidia-egl-icd (= 418.56-2~bpo9+1)
+Recommends: nvidia-driver-libs-i386, libopengl0 | libopengl0-glvnd-nvidia, libglx-nvidia0 (= 418.56-2~bpo9+1), libgles-nvidia1 (= 418.56-2~bpo9+1), libgles-nvidia2 (= 418.56-2~bpo9+1), libnvidia-cfg1 (= 418.56-2~bpo9+1), nvidia-vulkan-icd (= 418.56-2~bpo9+1)
+Conflicts: libegl1-glvnd-nvidia, libgl1-glvnd-nvidia-glx, libgldispatch0-nvidia, libgles1-glvnd-nvidia, libgles2-glvnd-nvidia, libglvnd0-nvidia, libglx0-glvnd-nvidia, libopengl0-glvnd-nvidia
+Breaks: libegl1-nvidia, libgl1-nvidia-glx, nvidia-driver-libs-nonglvnd, nvidia-nonglvnd-vulkan-icd
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-driver-libs_418.56-2~bpo9+1_amd64.deb
+Size: 201820
+SHA256: f27f8bd42150820a436b0c5ef25578a272152be8c0b713f1cc899f72f699b4e2
+SHA1: 65df115ef9cc2975576d2489abd4fd04c532c8a3
+MD5sum: 6515f9056bacb34ea14b80ba0a7fc641
+Description: NVIDIA metapackage (OpenGL/GLX/EGL/GLES libraries)
+ This metapackage depends on the NVIDIA binary libraries
+ that provide optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server.
+
+Package: nvidia-driver-libs-nonglvnd
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 218
+Depends: libgl1-nvidia-glx (= 418.56-2~bpo9+1), libegl1-nvidia (= 418.56-2~bpo9+1)
+Recommends: nvidia-driver-libs-nonglvnd-i386, libglx-nvidia0 (= 418.56-2~bpo9+1), libgles-nvidia1 (= 418.56-2~bpo9+1), libgles-nvidia2 (= 418.56-2~bpo9+1), libnvidia-cfg1 (= 418.56-2~bpo9+1), nvidia-nonglvnd-vulkan-icd (= 418.56-2~bpo9+1)
+Conflicts: libegl1-glvnd-nvidia, libgl1-glvnd-nvidia-glx, libgldispatch0-nvidia, libgles1-glvnd-nvidia, libgles2-glvnd-nvidia, libglvnd0-nvidia, libglx0-glvnd-nvidia, libopengl0-glvnd-nvidia
+Breaks: libgl1-nvidia-glvnd-glx, nvidia-driver-libs, nvidia-vulkan-icd
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-driver-libs-nonglvnd_418.56-2~bpo9+1_amd64.deb
+Size: 201816
+SHA256: 5f337999abc81975ad44beeca85504b6573a0457bddf3c08e09924cd599987f5
+SHA1: d6a58f79391ea5e1d26911002ba0a3040adba0ce
+MD5sum: 95d1a58d1196be364018bf3a37d4d3c6
+Description: NVIDIA metapackage (non-GLVND OpenGL/GLX/EGL/GLES libraries)
+ This metapackage depends on the (non-GLVND) NVIDIA binary libraries
+ that provide optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server.
+
+Package: nvidia-egl-common
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 221
+Suggests: libegl-nvidia0 | libegl-nvidia-legacy-390xx0
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-egl-common_418.56-2~bpo9+1_amd64.deb
+Size: 201924
+SHA256: 8c11f0175c8572e42dc3cca079dfe9ce0beaa0b43da799e6738f497c7c1c8076
+SHA1: 691b155e357f1e958c8692474a31f803245c10bc
+MD5sum: 879ced62e5343fa471144561afba5c97
+Description: NVIDIA binary EGL driver - common files
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES.
+ .
+ This package provides the common files for the NVIDIA installable client
+ driver (ICD) for EGL via GLVND.
+
+Package: nvidia-egl-icd
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 215
+Depends: nvidia-egl-common, libegl1 (>= 0.2.999) | libegl1-glvnd-nvidia, libegl-nvidia0 (= 418.56-2~bpo9+1)
+Enhances: libegl1
+Provides: egl-icd, libegl-vendor
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-egl-icd_418.56-2~bpo9+1_amd64.deb
+Size: 201652
+SHA256: 5edbca348fe1aedbb0b216c3c750f0947ee9120d35e9dc211f4f5ab77218f561
+SHA1: 6600121128c65b04762bd187254b17bd48c5e306
+MD5sum: e2139df375c88301b206fbd05b244216
+Description: NVIDIA EGL installable client driver (ICD)
+ EGL provides a platform-agnostic mechanism for creating rendering surfaces
+ for use with other graphics libraries, such as OpenGL|ES.
+ .
+ This metapackage provides the NVIDIA installable client driver (ICD) for
+ EGL via GLVND which supports NVIDIA GPUs.
+
+Package: nvidia-kernel-dkms
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 29742
+Pre-Depends: nvidia-installer-cleanup
+Depends: dkms (>= 2.1.0.0), nvidia-kernel-support--v1
+Recommends: nvidia-driver (>= 418.56) | libcuda1 (>= 418.56)
+Provides: nvidia-kernel-418.56
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/kernel
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-kernel-dkms_418.56-2~bpo9+1_amd64.deb
+Size: 11299888
+SHA256: 658c7aa08dea2e955611161e2bcbd538bf68dce50c7b7fecd3ceae64db70b85c
+SHA1: 69a8c6883e34063e537f9132a689d09002a9a94e
+MD5sum: 4ecf6227d556c1a3c508b5170da121a1
+Description: NVIDIA binary kernel module DKMS source
+ This package builds the NVIDIA Xorg binary kernel module needed by
+ nvidia-driver, using DKMS.
+ Provided that you have the kernel header packages installed, the kernel
+ module will be built for your running kernel and automatically rebuilt for
+ any new kernel headers that are installed.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, or newer architectures.  Look at the legacy packages
+ for older cards.
+ .
+ See /usr/share/doc/nvidia-kernel-dkms/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 4.20.
+
+Package: nvidia-kernel-source
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 11080
+Depends: debhelper-compat (= 12), make:any, quilt, xz-utils
+Recommends: module-assistant | kernel-package, nvidia-kernel-support
+Suggests: nvidia-driver (>= 418.56)
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/kernel
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-kernel-source_418.56-2~bpo9+1_amd64.deb
+Size: 11327252
+SHA256: 8ed661d6d993919d8df2971cae3e1ba7669b5da399bafbbcae9fe67bd09ea235
+SHA1: 5228bcadb60495d562be174edf37ad457d6cc617
+MD5sum: f09a69664bd93b031a9e86bd1928b6d6
+Description: NVIDIA binary kernel module source
+ This package provides the source for the NVIDIA Xorg binary kernel module
+ needed by nvidia-driver in a form suitable
+ for use by module-assistant or kernel-package.
+ .
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ PLEASE read /usr/share/doc/nvidia-kernel-source/README.Debian.gz
+ for building information.  If you want the kernel module to be automatically
+ installed via DKMS, install nvidia-kernel-dkms instead.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, or newer architectures.  Look at the legacy packages
+ for older cards.
+ .
+ See /usr/share/doc/nvidia-kernel-source/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+ .
+ This package contains the blobs for building kernel modules for the
+ amd64 architecture.
+ Building the kernel modules has been tested up to Linux 4.20.
+
+Package: nvidia-kernel-support
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 226
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), nvidia-alternative--kmod-alias, nvidia-kernel-common (>= 20151021), nvidia-modprobe (>= 352)
+Breaks: glx-alternative-nvidia (<< 0.6.91)
+Replaces: glx-alternative-nvidia (<< 0.6.91)
+Provides: nvidia-kernel-support--v1, nvidia-kernel-support-any
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/kernel
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-kernel-support_418.56-2~bpo9+1_amd64.deb
+Size: 202464
+SHA256: 66f1a795c1aabc55eef91bda7a15ce5a9e255d9ac7ce212a69405016211a9491
+SHA1: 06fe1b472ec0852721b9b356b2bf11158732343c
+MD5sum: 73292fa2e74f70b23d9ffa63c0ec61e6
+Description: NVIDIA binary kernel module support files
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ This package provides supporting configuration for the kernel module.
+
+Package: nvidia-legacy-check
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 234
+Pre-Depends: debconf | debconf-2.0, pciutils, nvidia-installer-cleanup (>= 20151021)
+Depends: debconf (>= 0.5) | debconf-2.0
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-legacy-check_418.56-2~bpo9+1_amd64.deb
+Size: 207210
+SHA256: 83fd9c9dfd221e0b14263ef7d59c698ab20104ad16dfe33e031af8d59ea62e13
+SHA1: 5935448f0f77d415497478de31955433689ac2ff
+MD5sum: 408d7e600d903aaed8087e4e8681c49f
+Description: check for NVIDIA GPUs requiring a legacy driver
+ This package checks whether the system contains NVIDIA GPUs that are no longer
+ supported by the main driver line and require a legacy driver.
+ .
+ If such hardware is present, a (preseedable) debconf question will be asked to
+ confirm the installation of the current driver line.
+
+Package: nvidia-libopencl1
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 255
+Depends: libc6 (>= 2.2.5)
+Recommends: nvidia-opencl-icd | opencl-icd
+Conflicts: libopencl1
+Replaces: libopencl1
+Provides: libopencl-1.1-1, libopencl-1.2-1, libopencl-2.0-1, libopencl1
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-libopencl1_418.56-2~bpo9+1_amd64.deb
+Size: 210590
+SHA256: e6ca545444a91cc2434d3d539f52661c929726a3096708f8923de12a262657bb
+SHA1: ba8e30a380626684255cff1a22e8776db13ce5e0
+MD5sum: b735746a00a9ac798d26c6cf74aeae77
+Description: NVIDIA OpenCL ICD Loader library
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ The OpenCL installable client driver loader (ICD Loader) acts as a dispatcher
+ between an OpenCL application and one (or more) installable client drivers
+ (ICD) that can be from any vendor. At least one ICD (and the corresponding
+ hardware) is required to run OpenCL applications.
+ .
+ This package contains the ICD Loader library provided by NVIDIA. This library
+ supports OpenCL 1.x and 2.0 only.
+
+Package: nvidia-nonglvnd-vulkan-common
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 221
+Suggests: nvidia-nonglvnd-vulkan-icd | nvidia-legacy-390xx-nonglvnd-vulkan-icd
+Conflicts: libgl1-nvidia-glvnd-glx, libgl1-nvidia-legacy-390xx-glvnd-glx, nvidia-vulkan-common
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-nonglvnd-vulkan-common_418.56-2~bpo9+1_amd64.deb
+Size: 201920
+SHA256: be3541d0aa074681f847ec6c97ab47f6e05a9afe66bd1bbf9b63bf3dbb075320
+SHA1: 0add657462b0ce42fa465b3b2870692dc44ed25e
+MD5sum: d7d0ec1f96206995990a27b4b17b910a
+Description: NVIDIA Vulkan driver - common files (non-GLVND variant)
+ Vulkan is a multivendor open standard by the Khronos Group for 3D graphics.
+ .
+ This package provides the common files for the NVIDIA installable client
+ driver (ICD) for Vulkan (non-GLVND variant).
+
+Package: nvidia-nonglvnd-vulkan-icd
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 215
+Depends: nvidia-nonglvnd-vulkan-common, libvulkan1 (>= 1.0.42), libgl1-nvidia-glx (= 418.56-2~bpo9+1), libnvidia-glvkspirv (= 418.56-2~bpo9+1)
+Recommends: libnvidia-cbl (= 418.56-2~bpo9+1), libnvidia-rtcore (= 418.56-2~bpo9+1)
+Suggests: vulkan-utils
+Enhances: libvulkan1
+Conflicts: nvidia-vulkan-icd
+Provides: vulkan-icd
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-nonglvnd-vulkan-icd_418.56-2~bpo9+1_amd64.deb
+Size: 201672
+SHA256: 0c4f55195e5a2d155198b72366c6c6a52b8b491d0b13b675631fc03aec323b84
+SHA1: 0b4d571ca828d5b7f2f5525864b99a06abb88bcf
+MD5sum: e76d9db7366b2a0233572c5dcdf4ee5a
+Description: NVIDIA Vulkan ICD (non-GLVND variant)
+ Vulkan is a multivendor open standard by the Khronos Group for 3D graphics.
+ .
+ This metapackage provides the NVIDIA installable client driver (ICD) for
+ Vulkan (non-GLVND variant) which supports NVIDIA GPUs.
+
+Package: nvidia-opencl-common
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 223
+Suggests: nvidia-opencl-icd | nvidia-legacy-390xx-opencl-icd
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-opencl-common_418.56-2~bpo9+1_amd64.deb
+Size: 201884
+SHA256: f61dd7e40658e10ae47ec3be61c4c3ccf0d9f57652cd16f54d99647f8f4e9375
+SHA1: 5163e2d69deedad6ff3af3cc518ed75ee27cf1ab
+MD5sum: 0b4cf28e62f6c118c5008904ab3a931d
+Description: NVIDIA OpenCL driver - common files
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package provides the common files for the NVIDIA installable client
+ driver (ICD) for OpenCL.
+
+Package: nvidia-opencl-icd
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 28194
+Depends: nvidia-opencl-common, ocl-icd-libopencl1 | nvidia-libopencl1 | libopencl1, nvidia-alternative (= 418.56-2~bpo9+1), libcuda1 (= 418.56-2~bpo9+1), libnvidia-compiler (= 418.56-2~bpo9+1), libc6 (>= 2.2.5), libnvidia-fatbinaryloader (>= 415)
+Enhances: libopencl1
+Provides: opencl-icd
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-opencl-icd_418.56-2~bpo9+1_amd64.deb
+Size: 2142454
+SHA256: 5bf95f5741a33eafcbeb31aea1c8336923e3fc17f1e778084aa8526fbc7b34ac
+SHA1: dfcad1834b68d243ff4b9964667d4aebf7654fa8
+MD5sum: a7a21f2fa60a2bbfdef70601886330c8
+Description: NVIDIA OpenCL installable client driver (ICD)
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package provides the NVIDIA installable client driver (ICD) for OpenCL
+ which supports NVIDIA GPUs. This ICD supports OpenCL 1.x only.
+
+Package: nvidia-smi
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 757
+Depends: nvidia-alternative (= 418.56-2~bpo9+1), libnvidia-ml1 (= 418.56-2~bpo9+1), libc6 (>= 2.2.5)
+Recommends: nvidia-kernel-dkms (= 418.56-2~bpo9+1) | nvidia-kernel-418.56
+Suggests: nvidia-kernel-dkms (>= 418.56) | nvidia-kernel-source (>= 418.56)
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/utils
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-smi_418.56-2~bpo9+1_amd64.deb
+Size: 388584
+SHA256: 37f0e89780ab8443b495050ad5c56aa609e98631d7a6ffb15e79a371a54a0e4c
+SHA1: edd78f53b79553fbbfe4ca99c24791df12602ae8
+MD5sum: d02480f8214fc573280e7a66849761be
+Description: NVIDIA System Management Interface
+ The NVIDIA Management Library (NVML) provides a monitoring and management API.
+ The application "nvidia-smi" is the NVIDIA System Management Interface (NVSMI)
+ and provides a command line interface to this functionality.
+ .
+ See the output from the --help command line option for supported models and
+ further information.
+
+Package: nvidia-vdpau-driver
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 1249
+Pre-Depends: nvidia-installer-cleanup, nvidia-legacy-check (>= 343)
+Depends: libvdpau1 (>= 0.9), nvidia-alternative (= 418.56-2~bpo9+1), libc6 (>= 2.2.5), libx11-6, libxext6
+Recommends: nvidia-kernel-dkms (= 418.56-2~bpo9+1) | nvidia-kernel-418.56
+Suggests: nvidia-kernel-dkms (>= 418.56) | nvidia-kernel-source (>= 418.56)
+Enhances: libvdpau1
+Provides: vdpau-driver
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/video
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-vdpau-driver_418.56-2~bpo9+1_amd64.deb
+Size: 889770
+SHA256: f31750cc678a289be571f18f5748a4e21bebfa03a9032c3934622a3d29218a2e
+SHA1: c9af9cef5997b84f7114e693494db69171240091
+MD5sum: 9207cdf2b55026bd13cb4ed76d365aea
+Description: Video Decode and Presentation API for Unix - NVIDIA driver
+ These libraries provide the Video Decode and Presentation API for Unix.
+ They provide accelerated video playback (incl. H.264) for the supported
+ graphics cards.
+ .
+ This package contains the NVIDIA VDPAU driver.
+ .
+ See /usr/share/doc/nvidia-vdpau-driver/README.txt.gz
+ for more information.
+ .
+ Please see the nvidia-kernel-dkms or
+ nvidia-kernel-source packages
+ for building the kernel module required by this package.
+ This will provide nvidia-kernel-418.56.
+
+Package: nvidia-vulkan-common
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 221
+Suggests: nvidia-vulkan-icd | nvidia-legacy-390xx-vulkan-icd
+Conflicts: libgl1-nvidia-glx, libgl1-nvidia-legacy-390xx-glx, nvidia-nonglvnd-vulkan-common
+Multi-Arch: foreign
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-vulkan-common_418.56-2~bpo9+1_amd64.deb
+Size: 201922
+SHA256: e5a08dbfe927cd4a6491d7471c13a3febfa68801a90e07e860fb58c3f1955c24
+SHA1: d9c909d272ad7dffdd749c1c3bcb6b38d9607177
+MD5sum: 6fc328c5559793b9c25a6b301959775e
+Description: NVIDIA Vulkan driver - common files
+ Vulkan is a multivendor open standard by the Khronos Group for 3D graphics.
+ .
+ This package provides the common files for the NVIDIA installable client
+ driver (ICD) for Vulkan (GLVND variant).
+
+Package: nvidia-vulkan-icd
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 215
+Depends: nvidia-vulkan-common, libvulkan1 (>= 1.0.42), libglx-nvidia0 (= 418.56-2~bpo9+1), libnvidia-glvkspirv (= 418.56-2~bpo9+1)
+Recommends: libnvidia-cbl (= 418.56-2~bpo9+1), libnvidia-rtcore (= 418.56-2~bpo9+1)
+Suggests: vulkan-utils
+Enhances: libvulkan1
+Conflicts: nvidia-nonglvnd-vulkan-icd
+Provides: vulkan-icd
+Multi-Arch: same
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/libs
+Filename: pool/non-free/n/nvidia-graphics-drivers/nvidia-vulkan-icd_418.56-2~bpo9+1_amd64.deb
+Size: 201654
+SHA256: 69de5489b30e7cc1d80818ce7790c8e0120000e7e33c5b68f9421a0dee035745
+SHA1: be179d475a1a32fc76164deb51a8ab84cd772993
+MD5sum: daa77479c0e8c70c03960ecba2922dda
+Description: NVIDIA Vulkan installable client driver (ICD)
+ Vulkan is a multivendor open standard by the Khronos Group for 3D graphics.
+ .
+ This metapackage provides the NVIDIA installable client driver (ICD) for
+ Vulkan (GLVND variant) which supports NVIDIA GPUs.
+
+Package: xserver-xorg-video-nvidia
+Source: nvidia-graphics-drivers
+Version: 418.56-2~bpo9+1
+Architecture: amd64
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 20495
+Pre-Depends: nvidia-installer-cleanup, nvidia-legacy-check (>= 343)
+Depends: libnvidia-glcore (= 418.56-2~bpo9+1), nvidia-alternative (= 418.56-2~bpo9+1), nvidia-support, xorg-video-abi-24 | xorg-video-abi-23 | xorg-video-abi-20 | xorg-video-abi-19 | xorg-video-abi-18 | xorg-video-abi-15 | xorg-video-abi-14 | xorg-video-abi-13 | xorg-video-abi-12 | xorg-video-abi-11 | xorg-video-abi-10 | xorg-video-abi-8 | xorg-video-abi-6.0, xserver-xorg-core (<< 2:1.20.99), libc6 (>= 2.2.5)
+Recommends: nvidia-driver (>= 418.56), nvidia-vdpau-driver (>= 418.56), nvidia-kernel-dkms (= 418.56-2~bpo9+1) | nvidia-kernel-418.56, nvidia-settings (>= 418)
+Suggests: nvidia-kernel-dkms (>= 418.56) | nvidia-kernel-source (>= 418.56)
+Breaks: glx-alternative-nvidia (<< 0.6.91)
+Replaces: glx-alternative-nvidia (<< 0.6.91)
+Provides: xorg-driver-video, xserver-xorg-video-nvidia-any
+Homepage: https://www.nvidia.com
+Priority: optional
+Section: non-free/x11
+Filename: pool/non-free/n/nvidia-graphics-drivers/xserver-xorg-video-nvidia_418.56-2~bpo9+1_amd64.deb
+Size: 2462474
+SHA256: 173ffeaed542967e44cf6768095db7766fe5097f67a98407174f444eefcf7107
+SHA1: 87290e96bc130462cf736d4f3e53f937d12cc21a
+MD5sum: f4a5813cfd95f57a09263f14248c1dde
+Description: NVIDIA binary Xorg driver
+ The NVIDIA binary driver provides optimized hardware acceleration of
+ OpenGL/GLX/EGL/GLES applications via a direct-rendering X Server
+ for graphics cards using NVIDIA chip sets.
+ .
+ Please see the nvidia-kernel-dkms or
+ nvidia-kernel-source packages
+ for building the kernel module required by this package.
+ This will provide nvidia-kernel-418.56.
+ .
+ This version only supports GeForce, Quadro, NVS, Tesla, ... GPUs based on the
+ Kepler, Maxwell, Volta, or newer architectures.  Look at the legacy packages
+ for older cards.
+ .
+ See /usr/share/doc/nvidia-driver/README.txt.gz
+ for a complete list of supported GPUs and PCI IDs.
+

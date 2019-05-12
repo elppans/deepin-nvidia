@@ -1,0 +1,6 @@
+Archive: stable
+Component: main
+Origin: github.com/elppans/deepin-nvidia
+Label: github.com/elppans/deepin-nvidia
+Architecture: amd64
+Description: Deepin NVidia repository

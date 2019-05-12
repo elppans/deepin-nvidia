@@ -1,0 +1,8 @@
+Origin: github.com/elppans/deepin-nvidia
+Label: github.com/elppans/deepin-nvidia
+Suite: stable
+Codename: lion
+Architectures: amd64 i386
+Components: main contrib non-free
+Description: Deepin NVidia repository
+SignWith: 41247A4CE4E0345F

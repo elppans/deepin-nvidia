@@ -1,0 +1,6 @@
+Archive: stable
+Component: contrib
+Origin: github.com/elppans/deepin-nvidia
+Label: github.com/elppans/deepin-nvidia
+Architecture: i386
+Description: Deepin NVidia repository

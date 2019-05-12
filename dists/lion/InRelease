@@ -1,0 +1,82 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: github.com/elppans/deepin-nvidia
+Label: github.com/elppans/deepin-nvidia
+Suite: stable
+Codename: lion
+Date: Sun, 12 May 2019 01:11:07 UTC
+Architectures: amd64 i386
+Components: main contrib non-free
+Description: Deepin NVidia repository
+MD5Sum:
+ 276d7b23ece2b98fe539f764fe616741 73151 main/binary-amd64/Packages
+ c89f49b12f82cbab6a312357b338e8a8 16065 main/binary-amd64/Packages.gz
+ 941d2e6aeca5b199d0974b9171f42c35 171 main/binary-amd64/Release
+ 44f5c70c88fc6d01329fa877a9693883 45987 main/binary-i386/Packages
+ 396a08a8611feecb7d154a20c12f3fbc 9602 main/binary-i386/Packages.gz
+ 6679655af6acc2ff82f44ee822e7ef0a 170 main/binary-i386/Release
+ 8f5af40ccc36c2d7826bf16fec4a6105 12081 contrib/binary-amd64/Packages
+ 7cac8a09a36a0c8f4aaae9b39be70887 3830 contrib/binary-amd64/Packages.gz
+ 36877e9918f5401653079848c428206b 174 contrib/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 contrib/binary-i386/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 contrib/binary-i386/Packages.gz
+ 01f8768afcdfeafddad0e382351c7e42 173 contrib/binary-i386/Release
+ 62efea37678b32d4beaf18b1fe9879e7 56483 non-free/binary-amd64/Packages
+ 6b5c0304997bcc6440bf4bf61d5c717d 11225 non-free/binary-amd64/Packages.gz
+ 0d64817fb6c95782c0acdb6a4b0e6215 175 non-free/binary-amd64/Release
+ a248ddf14c3f429d661fc25d4504f9bc 44682 non-free/binary-i386/Packages
+ 7c1380c9151c67cc789852c2fcdc8861 9028 non-free/binary-i386/Packages.gz
+ d7f38cb2132d6a78430d554c5cc061a4 174 non-free/binary-i386/Release
+SHA1:
+ aea20a00299612449916652677e86d6540e2e48d 73151 main/binary-amd64/Packages
+ f77c9c9a112cfae6bf663fa29519cffa051f3b20 16065 main/binary-amd64/Packages.gz
+ 99e05caaf09749539def3f63e798fc3b6bc5d36c 171 main/binary-amd64/Release
+ 9255960b8695e1777ad21647974a1332032da25d 45987 main/binary-i386/Packages
+ 775c75f7bace327037a9f59b7eb9e418734c07b9 9602 main/binary-i386/Packages.gz
+ d36a9e7014437c30bd4e772ef297231f246211ee 170 main/binary-i386/Release
+ 9e1e433b2e3e196e0b5d15e16aa93801cf074f74 12081 contrib/binary-amd64/Packages
+ 11b72f2d58a9ac71a5c852868a4596d45a098f6d 3830 contrib/binary-amd64/Packages.gz
+ f1e34b149347bd19ea99b702c0a711f129cfb143 174 contrib/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 contrib/binary-i386/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 contrib/binary-i386/Packages.gz
+ c301d1cca37b22fd1aa3efc38afd68796119fd87 173 contrib/binary-i386/Release
+ b666099249647bd0d18ba6e76b626c8a48e9fc04 56483 non-free/binary-amd64/Packages
+ 4d0bd06f192e5c51c681ea8dc626679309b4cbc1 11225 non-free/binary-amd64/Packages.gz
+ 3aad13ac320818f02f2e1d2e929998f2d7a63c44 175 non-free/binary-amd64/Release
+ 292379470f75c170ef71761ad1179f125d118839 44682 non-free/binary-i386/Packages
+ 1ecc8312a27b5d66c5f3f21bbcf9561074435544 9028 non-free/binary-i386/Packages.gz
+ bb92337ec9a5e3b63cf2750aaee78a2da7914f0c 174 non-free/binary-i386/Release
+SHA256:
+ a3c89e9ee1570c38d1159eb6a17d64f98e835b7dcb41afdb79fe977525369dad 73151 main/binary-amd64/Packages
+ 49d0a62f8b6eedaa3c264c054612cd2e620d927e84b9dc819453d72fb1691a2c 16065 main/binary-amd64/Packages.gz
+ b09f066ae225295c136919cc582dc3f0231f6ece15729629b4d6b7258b8d061d 171 main/binary-amd64/Release
+ 590c5289449d257f1efd3c44779dcf663715d5e5868b7d0aa1dce27cf6ff24f6 45987 main/binary-i386/Packages
+ 85b3bc2e6520674c14d77f31907d3bf6949ec298a9fef9714161531c097afe16 9602 main/binary-i386/Packages.gz
+ 9c8e6627f1191835cc147ea46fb5f08418a70265c4a0cf57c6eb4a1f1cd6c308 170 main/binary-i386/Release
+ afd577d45a7d0b517fb3f64d3ce01e5a1e63b2c55f67b773ebc3247001673661 12081 contrib/binary-amd64/Packages
+ a0237e892176723b7384c14f920c6ace831553a04d8f4ac94585eab6bc1d93c3 3830 contrib/binary-amd64/Packages.gz
+ 782b3f10fb315a752378a849fc5e51decf2a65e2fbe0ef5f3f39a2ba827bc510 174 contrib/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 contrib/binary-i386/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 contrib/binary-i386/Packages.gz
+ 7caa955dc57b416202cf06fc4ac95004fbfb6b0cacb309bd31c8dd70ad58e845 173 contrib/binary-i386/Release
+ 8cf77318061189ff010cddf374ccd29bed7b92e674152875a6bd9121cd561e87 56483 non-free/binary-amd64/Packages
+ 0dace014c950ea76c171b73149433cde3e0bc28876e94324bb4886a65441664f 11225 non-free/binary-amd64/Packages.gz
+ f467e674e5bd7950b5af1fc48f15cd0fbe10db4c6c206310bdb8a30343251ab6 175 non-free/binary-amd64/Release
+ 1f3672e00dd20959270e171ece0dd6944c20d94f82ab2576828f13291ea20254 44682 non-free/binary-i386/Packages
+ b452c91f30b7fdfd34fa3e4b52c8a62d51c0e130758efcff384a848d6f43ed34 9028 non-free/binary-i386/Packages.gz
+ cb960b92aa7a3d6584b9761abf0e90ca7ffd9bd3b406eb96b76bd42a61039c80 174 non-free/binary-i386/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEEdXixjEWya+FnUZN7QSR6TOTgNF8FAlzXcrwACgkQQSR6TOTg
+NF+D0Qv+Oo+EAyRX5E03TuUyIJoTplWPjusoJoALYC1QZosJnxUcSoZYoaCUX2EF
+YYhZwlLRMyOuudgkuuNF1Jn8Apsm0qflPV7KiFJRsItwxHucq2CTZCE7DoQecCAa
+diJWeKPkQyFyOxoEpvpsnPS0CECvNmmQJHBtpEwZZwC6ejw3yhComT6puWI0Fqay
+gq0WXb+jMK47/cxWt36YZtl6uyNyVTn/RhMEvQCjv2XAbVLm7owBrFr7XLObYdka
+hENnBfBHetsxGlh3TShwz+TOBrXQw8CW11Wl9BMd9YcZd82GtUA3umh8kq/zymnt
+2KoZqMT8siEtUp7amGksmpNW4ePJRKQALm6kn/BgEYYNR5496r5QxaoqNFSbxIw9
+gixhiaFU3bPQnIWcWlyBtLcAdxeZALK59XlSQE8deWg3gXO+x6dBVCstwUIvgvwE
+AS13/Vqo1zuNv+Gr4AZAr1vqSNc/1n+3KKGe4msPCFVOSoRYZu/src9DOPyY1o1E
+O51f0YST
+=LfWl
+-----END PGP SIGNATURE-----
