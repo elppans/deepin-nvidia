@@ -1,10 +1,26 @@
 # deepin-nvidia
-nvidia-graphics-drivers-418.56 para Linux Deepin Lion (15.10)
+# nvidia-graphics-drivers-418.56 para Linux Deepin Lion (15.10)
 
 Este é um repositório NÃO OFICIAL para a instalação do Driver NVidia e sua versão atual é 418.56
 
 Foi usado o source de alguns pacotes do Debian Stable + Stable Backports, porém, mantendo todas as dependências do Deepin,
 para que seja o mais estável possível.
+Por não ser um repositório oficial, ao sair a versão compilada pelo próprio time Deepin, prefira a mesma.
+
+Para quem quer testar e usar, deve adicionar esta chave:
+
+wget -qO - https://elppans.github.io/deepin-nvidia//public.key | sudo apt-key add -
+
+E deve adicionar o repositório em seu sources.list:
+
+deb https://elppans.github.io/deepin-nvidia/ lion main contrib non-free
+
+Para listar e remover uma chave de fontes apt, use os seguintes comandos, respectivamente.
+
+apt-key list
+sudo apt-key del KEY.ID
+
+#
 
 Abaixo está uma lista de todos os pacotes disponíveis:
 
