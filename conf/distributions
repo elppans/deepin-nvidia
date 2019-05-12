@@ -1,5 +1,5 @@
-Origin: github.com/elppans/deepin-nvidia
-Label: github.com/elppans/deepin-nvidia
+Origin: elppans.github.io/deepin-nvidia/
+Label: elppans.github.io/deepin-nvidia/
 Suite: stable
 Codename: lion
 Architectures: amd64 i386
