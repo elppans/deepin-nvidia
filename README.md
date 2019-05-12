@@ -3,7 +3,7 @@
 ## nvidia-graphics-drivers-418.56-2~bpo9+1 para Linux Deepin Lion (15.10)
 
 
-<a href="deepin-nvidia_418.56.jpg" title="Clique aqui para ampliar" ><img src="deepin-nvidia_418.56.jpg" width="1024" height="445" /></a>
+![image](<deepin-nvidia_418.56.jpg>){width=250px}
 
 Este é um repositório **NÃO OFICIAL** para a instalação do Driver NVidia e sua versão atual é 418.56
 
