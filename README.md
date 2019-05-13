@@ -29,7 +29,7 @@ $ sudo apt-key del KEY.ID
 ```
 
 Detailed information about the Graphic Driver:
-https://www.nvidia.com.br/download/driverResults.aspx/145276/en
+[https://www.nvidia.com.br/download/driverResults.aspx/145276/en](https://www.nvidia.com.br/download/driverResults.aspx/145276/en)
 
 
 
